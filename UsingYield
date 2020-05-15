@@ -1,0 +1,23 @@
+'''
+Simple code to do a Fibonacci Sequence in Python 3 using yield
+You use yield or generator to save memory as you get results as needed
+
+Fibonnaci Sequence is the sum of the two preceding ones, starting from 0 to 1
+We are starting at 1 here
+
+Written by Neto
+03/25/2020
+'''
+
+def gen_fibonacci(x): #function to create fibonacci, it takes one parameter
+    
+    # assuming fibonacci sequence starts at 1
+    a = 1
+    b = 1
+    
+    for i in range(x):
+        yield a
+        
+        a,b = b, a+b 
+        # this resets a to be equal to b and b to be equal to a+b
+        
